@@ -1,7 +1,7 @@
 
 # Aventuras Espaciales
 ## TP PROGRAMACIÓN SOBRE REDES JASINSKI 2026
-## Integrantes
+## Integrantes:
 
 - Agustín Bruno
 - Guillermo Bordoli
