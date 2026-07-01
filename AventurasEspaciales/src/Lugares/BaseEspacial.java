@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import Misiones.Mision;
+import Misiones.MisionEstabilizacionReactor;
+import Misiones.MisionNucleoEnergia;
+import Misiones.MisionReparacionCasco;
 import Misiones.RequisitoMision;
 
 public class BaseEspacial {
@@ -51,26 +54,10 @@ public class BaseEspacial {
     }
 
     private void cargarMisiones() {
-    	
-    	ArrayList<RequisitoMision> req1 = new ArrayList<>();
-    	req1.add(new RequisitoMision("Mineral comun", 3));
-    	req1.add(new RequisitoMision("Cristal", 1));
-    	
-    	ArrayList<RequisitoMision> req2 = new ArrayList<>();
-    	req2.add(new RequisitoMision("Gases", 2));
-    	req2.add(new RequisitoMision("Cristal", 1));
-    	
-    	
-    	ArrayList<RequisitoMision> req3 = new ArrayList<>();
-    	req3.add(new RequisitoMision("Nucleo energético", 1));
-    	req3.add(new RequisitoMision("Obsidianas", 2));
-    	
-    	misiones.add(new Mision("Reparacion del casco exterior", req1, 120));
-    	misiones.add(new Mision("Estabilizacion del reactor", req2, 170));
-    	misiones.add(new Mision("Nucleo de energía principal", req3, 170));
-    	
-    	
-	}
+        misiones.add(new MisionReparacionCasco());
+        misiones.add(new MisionEstabilizacionReactor());
+        misiones.add(new MisionNucleoEnergia());
+    }
 
 	private void ejecutarOpcion(int opcion) {
         switch (opcion) {
