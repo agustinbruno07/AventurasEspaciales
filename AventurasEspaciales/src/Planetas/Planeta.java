@@ -1,5 +1,7 @@
 package Planetas;
 
+import Recursos.Recurso;
+
 import java.util.Random;
 
 public class Planeta {
@@ -16,7 +18,7 @@ public class Planeta {
         return nombre;
     }
 
-    public String minar() {
-        return "";
+    public Recurso minar() {
+        return null;
     }
 }

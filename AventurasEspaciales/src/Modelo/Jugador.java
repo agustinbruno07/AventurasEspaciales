@@ -37,4 +37,18 @@ public class Jugador {
         this.energia = energiaInicial;
     }
 
+    public boolean tieneEnergia(int energiaNecesaria) {
+        return energia >= energiaNecesaria;
+    }
+
+    public void restarEnergia(int cantidad) {
+        energia -= cantidad;
+        if (energia < 0) {
+            energia = 0;
+        }
+    }
+    public void agregarCreditos(int monto) {
+        this.creditosEspaciales += monto;
+    }
+
 }

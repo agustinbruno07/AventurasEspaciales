@@ -1,5 +1,10 @@
 package Planetas;
 
+import Recursos.Lava;
+import Recursos.NucleoEnergetico;
+import Recursos.Obsidiana;
+import Recursos.Recurso;
+
 public class PlanetaVolcanico extends Planeta {
 
     public PlanetaVolcanico() {
@@ -7,15 +12,15 @@ public class PlanetaVolcanico extends Planeta {
     }
 
     @Override
-    public String minar() {
+    public Recurso minar() {
         int probabilidad = random.nextInt(100) + 1;
 
         if (probabilidad <= 50) {
-            return "Lava";
+            return new Lava();
         } else if (probabilidad <= 80) {
-            return "Obsidiana";
+            return new Obsidiana();
         } else {
-            return "Nucleo energetico";
+            return new NucleoEnergetico();
         }
     }
 }

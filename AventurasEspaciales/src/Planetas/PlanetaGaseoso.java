@@ -1,5 +1,10 @@
 package Planetas;
 
+import Recursos.Cristal;
+import Recursos.Gas;
+import Recursos.Plasma;
+import Recursos.Recurso;
+
 public class PlanetaGaseoso extends Planeta {
 
     public PlanetaGaseoso() {
@@ -7,15 +12,15 @@ public class PlanetaGaseoso extends Planeta {
     }
 
     @Override
-    public String minar() {
+    public Recurso minar() {
         int probabilidad = random.nextInt(100) + 1;
 
         if (probabilidad <= 60) {
-            return "Gas";
+            return new Gas();
         } else if (probabilidad <= 85) {
-            return "Plasma";
+            return new Plasma();
         } else {
-            return "Cristal";
+            return new Cristal();
         }
     }
 }
